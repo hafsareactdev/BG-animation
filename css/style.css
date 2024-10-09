@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.animated-background {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+    background-image: radial-gradient(circle, #6200ea 10%, transparent 10%),
+                      radial-gradient(circle, #bb86fc 10%, transparent 10%);
+    background-size: 50px 50px;
+    background-position: 0 0, 25px 25px;
+    animation: moveBackground 3s linear infinite;
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    z-index: 1;
+}
+
+@keyframes moveBackground {
+    0% {
+        background-position: 0 0, 25px 25px;
+    }
+    100% {
+        background-position: 50px 50px, 75px 75px;
+    }
+}
